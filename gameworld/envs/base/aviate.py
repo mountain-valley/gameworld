@@ -41,7 +41,8 @@ class Aviate(GameworldEnv):
 
         self.reset()
 
-    def reset(self):
+    def reset(self, *, seed=None, options=None):
+        super().reset(seed=seed)
         self.bird_y = 160
         self.bird_vel_y = 0
         self.pipes = []

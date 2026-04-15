@@ -6,9 +6,9 @@ class GameworldEnv(gym.Env):
     def __init__(self, **kwargs):
         super().__init__()
 
-    def reset(self):
-        # override with reset logic
-        return self._get_obs(), {}
+    def reset(self, *, seed=None, options=None):
+        super().reset(seed=seed)
+        # override with reset logic in subclasses
 
     def step(self, action):
         # override with step logic

@@ -47,7 +47,8 @@ class Drive(GameworldEnv):
 
         self.reset()
 
-    def reset(self):
+    def reset(self, *, seed=None, options=None):
+        super().reset(seed=seed)
         self.player_y = self.height - 30
         self.player_x = self.width // 2 - self.car_width // 2
         self.opponents = []
